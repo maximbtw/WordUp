@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c691e39-4158-4b3c-875a-5859f335dc3b" name="Changes" comment="init project" />
+    <list default="true" id="0c691e39-4158-4b3c-875a-5859f335dc3b" name="Changes" comment="add checkBox scripts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="maximbtw &lt;traglodet2001@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 3
 }]]></component>
   <component name="ProjectId" id="2TiKWL3jnR4TgXbq8Xxbkvik0HC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +44,8 @@
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+    ],
     "rider.external.source.directories": [
       "C:\\Users\\tragl\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
       "C:\\Users\\tragl\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
@@ -86,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691520492637</updated>
-      <workItem from="1691520494859" duration="303000" />
+      <workItem from="1691520494859" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -96,12 +109,29 @@
       <option name="project" value="LOCAL" />
       <updated>1691520782754</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init project">
+      <option name="closed" value="true" />
+      <created>1691520892939</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691520892939</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add checkBox scripts">
+      <option name="closed" value="true" />
+      <created>1691521524262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691521524262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project" />
+    <MESSAGE value="add checkBox scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add checkBox scripts" />
   </component>
 </project>
