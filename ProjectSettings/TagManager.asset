@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Button_Dictionary
+  - Button_Settings
+  - Button_Learn
+  - Button_Stats
+  - Button_Help
   layers:
   - Default
   - TransparentFX
