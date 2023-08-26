@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
+using UnityEngine;
 using WordUp.Api.Contracts.Translate;
 using WordUp.Api.Contracts.TranslateMany;
 using WordUp.Api.DeepTranslate;
 using WordUp.Api.DeepTranslate.Connector;
+using Zenject;
 
 namespace WordUp.Api
 {
@@ -10,6 +12,7 @@ namespace WordUp.Api
     {
         private readonly IDeepTranslate _deepTranslateHandler;
 
+        [Inject]
         public ExternalSystemHandler(IDeepTranslateConnector deepTranslateRestConnector)
         {
             _deepTranslateHandler = new DeepTranslateHandler(deepTranslateRestConnector);

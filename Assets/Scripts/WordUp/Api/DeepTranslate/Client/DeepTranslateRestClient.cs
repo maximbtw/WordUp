@@ -3,6 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using RestSharp;
 using Newtonsoft.Json;
+using Unity.Services.RemoteConfig;
 
 namespace WordUp.Api.DeepTranslate.Client
 {
@@ -18,10 +19,13 @@ namespace WordUp.Api.DeepTranslate.Client
             {
                 IRestRequest restRequest = new RestRequest(resource, Method.POST);
 
-                restRequest.AddHeader("content-type", value: ApplicationJsonMediaType);
-                restRequest.AddHeader("X-RapidAPI-Key", "f41c7d8261mshd65875144a74fdbp1c56c1jsned4f38ecd106");
-                restRequest.AddHeader("X-RapidAPI-Host", "deep-translate1.p.rapidapi.com");
+                string apiKey = RemoteConfigService.Instance.appConfig.GetString("DeepTranslateApiKey");
+                string apiHost = RemoteConfigService.Instance.appConfig.GetString("DeepTranslateHost");
                 
+                restRequest.AddHeader("content-type", value: ApplicationJsonMediaType);
+                restRequest.AddHeader("X-RapidAPI-Key", value: apiKey);
+                restRequest.AddHeader("X-RapidAPI-Host", value: apiHost);
+
                 string jsonRequest = JsonConvert.SerializeObject(request);
 
                 restRequest.AddJsonBody(jsonRequest);

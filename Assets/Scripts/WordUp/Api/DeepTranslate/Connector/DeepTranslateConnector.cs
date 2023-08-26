@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using WordUp.Api.DeepTranslate.Client;
 using WordUp.Api.DeepTranslate.Contracts.Translate;
+using Zenject;
 
 namespace WordUp.Api.DeepTranslate.Connector
 {
@@ -10,6 +11,7 @@ namespace WordUp.Api.DeepTranslate.Connector
         
         private readonly IDeepTranslateRestClient _restClient;
 
+        [Inject]
         public DeepTranslateConnector(IDeepTranslateRestClient restClient)
         {
             _restClient = restClient;

@@ -1,9 +1,9 @@
 ﻿namespace WordUp
 {
-    public static class Configuration
+    public class Configuration
     {
-        public static string DeepTranslateApiKey { get; set; }
+        public string DeepTranslateApiKey { get; set; }
 
-        public static string DeepTranslateHost { get; set; }
+        public string DeepTranslateHost { get; set; }
     }
 }
