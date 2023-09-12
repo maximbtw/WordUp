@@ -37,13 +37,13 @@ namespace WordUp.Views.LearnGroupView
             
             LoadSceneAdditive((int)SceneNumber.LearnGameView);
         }
-        
-        public override object GetDataFromScene()
+
+        protected override object GetDataFromScene()
         {
             return _learnGroupSettings;
         }
 
-        public override void LoadDataFromScene(object data)
+        protected override void LoadDataFromScene(object data)
         {
             if (data is not List<WordDto> words)
             {

@@ -21,10 +21,8 @@ namespace WordUp.Views.SettingsView
         private SettingsDto _saveModel;
         private SettingsDto _modificationModel;
 
-        protected override void Start()
+        protected override void LateStart()
         {
-            base.Start();
-            
             _saveModel = _settingsService.GetModel();
 
             // TODO: DeepClone

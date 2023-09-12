@@ -5,155 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c691e39-4158-4b3c-875a-5859f335dc3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/DestroyedComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/DestroyedComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionaryEditInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionaryEditInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionaryListInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionaryListInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionarySortInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/DictionarySortInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/LearnMenuInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/LearnMenuInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/MainMenuInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ProfileMenuInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ProfileMenuInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/SettingsMenuInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/SettingsMenuInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/IModelDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/IModelDto.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Settings/SettingsDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Settings/SettingsDto.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Settings/SettingsDtoValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Settings/SettingsDtoValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/ValidatorModelBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/ValidatorModelBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Word.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Word/WordDtoValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Word/WordDtoValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/CachedEntityServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/CachedEntityServiceBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/DataService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/DataService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/IDataService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/IDataService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Settings/ISettingsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Settings/ISettingsService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Settings/SettingsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Settings/SettingsService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/IWordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/IWordService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/WordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/WordService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/LanguageHelpers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/LanguageHelpers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/UIHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/UIHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ModalWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ModalWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/PopupMenu.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/PopupMenu/PopupMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/PopupMenu/PopupMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/PopupMenu/PopupMenuItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/PopupMenu/PopupMenuItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ValidationMessageBox.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ValidationMessageBox/ValidationMessageBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ValidationMessageBox/ValidationMessageBox.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ValidationMessageBox/ValidationMessageBoxItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ValidationMessageBox/ValidationMessageBoxItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordListSortingSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordListSortingSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/DictionaryEditViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/DictionaryEditViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/TranslateControl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/TranslateControl/TranslateControlController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/TranslateControl/TranslateControlController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/TranslateControl/TranslateControlLanguageController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/TranslateControl/TranslateControlLanguageController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewPopupMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewPopupMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionarySortView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionarySortView/DictionarySortViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionarySortView/DictionarySortViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupSettingsData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupSettingsData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupContentView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupContentView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemVisualization.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemVisualization.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/MainMenuView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/MainMenuView/MainMenuViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/MainMenuView/MainMenuViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView/Control.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView/Control/ProfileViewLabel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView/Control/ProfileViewLabel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView/ProfileViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ProfileView/ProfileViewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneControllerBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneControllerBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneNumber.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView/Control.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView/Control/SettingsViewButtonSound.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView/Control/SettingsViewButtonSound.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView/SettingsViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SettingsView/SettingsViewController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneStaticDataLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneStaticDataLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/DeepTranslate/DeepTranslateHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/DeepTranslate/DeepTranslateHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/ExternalSystemHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/ExternalSystemHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/HandlerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Api/HandlerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ApplicationInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/ApplicationInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ApplicationInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Configuration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Configuration.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Data/WordDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Word/WordDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Data/WordDto.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service.Contracts/Word/WordDto.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/SceneSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/ButtonEventHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/SceneSwitcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/ButtonEventHelpers.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/CollectionHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/CollectionHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/TestZenject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/TestZenject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBoxSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBoxSlider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBoxSliderAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/CheckBox/CheckBoxSliderAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ContentView.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ContentView/ContentViewController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ContentView/ContentViewController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordList.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ContentView/ContentViewWordItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordListItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ContentView/ContentViewWordItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/WordList/WordListItem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/appsettings.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/DictionaryEditViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryEditView/DictionaryEditViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionaryListView/DictionaryListViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionarySortView/DictionarySortViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/DictionarySortView/DictionarySortViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnGroupView/LearnGroupViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneControllerBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,10 +275,10 @@
           <line>122</line>
           <properties documentPath="E:\Project\Unity\Projects\WordUp\Assets\Scripts\WordUp\Views\DictionaryListView\DictionaryListViewController.cs" initialLine="122" containingFunctionPresentation="Method 'ShowPopupMenu'">
             <startOffsets>
-              <option value="3222" />
+              <option value="3228" />
             </startOffsets>
             <endOffsets>
-              <option value="3296" />
+              <option value="3302" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="63" />

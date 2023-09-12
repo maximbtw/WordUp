@@ -45,22 +45,20 @@ namespace WordUp.Views.DictionaryListView
             LoadSceneAdditive((int)SceneNumber.DictionaryEditView);
         }
 
-        protected override void Start()
+        protected override void LateStart()
         {
-            base.Start();
-            
             wordList.onItemClick.AddListener(ShowPopupMenu);
 
             List<WordDto> words = _wordService.GetModels().ToList();
             wordList.LoadItems(words);
         }
 
-        public override object GetDataFromScene()
+        protected override object GetDataFromScene()
         {
             return _data;
         }
 
-        public override void LoadDataFromScene(object data)
+        protected override void LoadDataFromScene(object data)
         {
             if (data == null)
             {

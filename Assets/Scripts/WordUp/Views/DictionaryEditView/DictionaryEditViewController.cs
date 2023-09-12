@@ -22,10 +22,8 @@ namespace WordUp.Views.DictionaryEditView
         private WordDto _modifiedWord;
         private WordDto _savedWord;
 
-        protected override void Start()
+        protected override void LateStart()
         {
-            base.Start();
-            
             checkBoxMarkAutoTranslate.selectedChanged.AddListener(x => translateControlController.AutoTranslate = x);
         }
         
@@ -53,12 +51,12 @@ namespace WordUp.Views.DictionaryEditView
             UnloadScene((int)SceneNumber.DictionaryEditView);
         }
 
-        public override object GetDataFromScene()
+        protected override object GetDataFromScene()
         {
             return _modifiedWord;
         }
 
-        public override void LoadDataFromScene(object data)
+        protected override void LoadDataFromScene(object data)
         {
             if (data == null)
             {

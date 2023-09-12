@@ -1,24 +1,34 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace WordUp.Views
 {
     public abstract class SceneControllerBase : MonoBehaviour
     {
-        protected virtual void Start()
+        private void Start()
         {
-            StaticDataLoader.OpenScene(this);
+            var staticDataHandler = new SceneStaticDataLoader.DataHandler
+            {
+                GetData = GetDataFromScene,
+                LoadData = LoadDataFromScene
+            };
+            
+            SceneStaticDataLoader.OpenScene(staticDataHandler);
+
+            LateStart();
         }
 
-        public virtual object GetDataFromScene()
+        protected virtual void LateStart()
+        {
+        }
+
+        protected virtual object GetDataFromScene()
         {
             return null;
         }
 
-        public virtual void LoadDataFromScene(object data){
-            
+        protected virtual void LoadDataFromScene(object data)
+        {
         }
         
         public void LoadSceneAdditive(int sceneBuildIndex)
@@ -28,45 +38,9 @@ namespace WordUp.Views
         
         public void UnloadScene(int sceneBuildIndex)
         {
-            StaticDataLoader.CloseScene();
+            SceneStaticDataLoader.CloseScene();
             
             SceneManager.UnloadSceneAsync(sceneBuildIndex);
-        }
-    }
-    
-    internal static class StaticDataLoader
-    {
-        private static object _data;
-
-        private static readonly Stack<SceneControllerBase> StackActiveScenes = new();
-
-        internal static void CloseScene()
-        {
-            var closetScene = StackActiveScenes.Pop();
-            
-            object data = closetScene.GetDataFromScene();
-            
-            SceneControllerBase lastOpenScene = StackActiveScenes.Peek();
-            
-            lastOpenScene.LoadDataFromScene(data);
-        }
-
-        internal static void OpenScene(SceneControllerBase scene)
-        {
-            if (!StackActiveScenes.Any())
-            {
-                StackActiveScenes.Push(scene);
-                
-                return;
-            }
-            
-            SceneControllerBase lastOpenScene = StackActiveScenes.Peek();
-            
-            object data = lastOpenScene.GetDataFromScene();
-            
-            scene.LoadDataFromScene(data);
-            
-            StackActiveScenes.Push(scene);
         }
     }
 }

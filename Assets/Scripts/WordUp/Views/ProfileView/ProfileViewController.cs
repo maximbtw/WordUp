@@ -15,10 +15,8 @@ namespace WordUp.Views.ProfileView
 
         [Inject] private IWordService _wordService;
 
-        protected override void Start()
+        protected override void LateStart()
         {
-            base.Start();
-            
             List<WordDto> models = _wordService.GetModels().ToList();
             
             learnedWordsCount.SetText(models.Count(x=>x.IsLearned).ToString());

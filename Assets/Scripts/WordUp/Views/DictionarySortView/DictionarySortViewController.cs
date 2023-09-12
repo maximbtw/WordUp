@@ -26,12 +26,12 @@ namespace WordUp.Views.DictionarySortView
             UnloadScene((int)SceneNumber.DictionarySortView);
         }
 
-        public override object GetDataFromScene()
+        protected override object GetDataFromScene()
         {
             return _modifiedSortingSettings;
         }
 
-        public override void LoadDataFromScene(object data)
+        protected override void LoadDataFromScene(object data)
         {
             if (data is not WordListSortingSettings settings)
             {
