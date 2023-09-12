@@ -9,8 +9,26 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu_Scene.unity
     guid: f10ae474ff1e4fb46afac4f0b9f711c0
   - enabled: 1
-    path: Assets/Scenes/Dictionary_Scene.unity
+    path: Assets/Scenes/DictionaryList_Scene.unity
     guid: be47cedf10b097a4891db6550ce214af
+  - enabled: 1
+    path: Assets/Scenes/DictionaryEdit_Scene.unity
+    guid: 0151d8bdd2673fc44b8865016aae291d
+  - enabled: 1
+    path: Assets/Scenes/DictionarySort_Scene.unity
+    guid: 2dffcc64b96bc4749898e85bee58c9cd
+  - enabled: 1
+    path: Assets/Scenes/Settings_Scene.unity
+    guid: 349311dc4bf52594dbefae96df25cf9f
+  - enabled: 1
+    path: Assets/Scenes/Profile_Scene.unity
+    guid: 4fddb80fbf73b2442805c0ac1ac152b2
+  - enabled: 1
+    path: Assets/Scenes/LearnMenu_Scene.unity
+    guid: ab1b68d503330f244aa03ebba61bd1f3
+  - enabled: 1
+    path: Assets/Scenes/LearnGroup_Scene.unity
+    guid: de87ae202047ca9479da4e0bf418311d
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 67d28a2ce3a492647b4b4a758ae03b63, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 6ff5fe9ca3934024c822aeed3c1d5e03, type: 2}

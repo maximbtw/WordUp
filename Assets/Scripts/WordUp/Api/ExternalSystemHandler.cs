@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using UnityEngine;
 using WordUp.Api.Contracts.Translate;
 using WordUp.Api.Contracts.TranslateMany;
 using WordUp.Api.DeepTranslate;

@@ -1,6 +1,9 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace WordUp.UI.CheckBox
@@ -17,6 +20,8 @@ namespace WordUp.UI.CheckBox
         private CheckBoxSliderAnimator _animator;
         private CheckBox _checkBox;
         private TextMeshProUGUI _text;
+
+        public UnityEvent<bool> selectedChanged;
 
         public CheckBoxColorBlock ColorBlock
         {
@@ -36,21 +41,21 @@ namespace WordUp.UI.CheckBox
             }
         }
 
-        public bool Seleted
+        public bool Selected
         {
             get => selected;
             set
             {
                 selected = value;
                 SetProperties();
-                OnSelectedChanged();
+                OnSelectedChanged(selected);
             }
         }
 
         protected override void Start()
         {
             SetProperties();
-            _checkBox.OnClick += OnSelectedChanged;
+            _checkBox.OnClick.AddListener(x=> this.Selected = x);
         }
 
         protected void Update()
@@ -66,9 +71,9 @@ namespace WordUp.UI.CheckBox
                 return;
             }
 
-            TargetGraphic = targetGraphic;
-            ColorBlock = colorBlock;
-            Seleted = selected;
+            this.TargetGraphic = targetGraphic;
+            this.ColorBlock = colorBlock;
+            this.Selected = selected;
         }
 #endif
 
@@ -83,11 +88,11 @@ namespace WordUp.UI.CheckBox
             _checkBox.Seleted = selected;
         }
 
-        private void OnSelectedChanged()
+        private void OnSelectedChanged(bool localSelected)
         {
-            Debug.Log("Click");
+            selectedChanged?.Invoke(localSelected);
 
-            _animator.PlayAnimation(selected);
+            _animator.PlayAnimation(localSelected);
         }
     }
 }

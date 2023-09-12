@@ -36,10 +36,8 @@ namespace WordUp.UI.CheckBox
         public void PlayAnimation(bool selected)
         {
             _selected = selected;
-
-#if UNITY_EDITOR
+            
             targetObject.localPosition = selected ? selectedPosition : normalPosition;
-#endif
         }
     }
 }

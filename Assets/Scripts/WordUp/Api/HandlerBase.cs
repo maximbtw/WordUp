@@ -11,6 +11,8 @@ namespace WordUp.Api
             try
             {
                 TResult result = await operation.Invoke();
+                
+                result.IsSuccess = true;
 
                 return result;
             }
@@ -18,7 +20,7 @@ namespace WordUp.Api
             {
                 var response = new TResult
                 {
-                    IsSuccess = true,
+                    IsSuccess = false,
                     Error = exception.Message
                 };
 

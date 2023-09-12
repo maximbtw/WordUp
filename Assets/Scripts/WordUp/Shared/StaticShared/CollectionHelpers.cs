@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WordUp.Shared
+namespace WordUp.Shared.StaticShared
 {
     public static class CollectionHelpers
     {
@@ -74,7 +74,7 @@ namespace WordUp.Shared
             );
         }
 
-        static public string JoinToString<T>(
+        private static string JoinToString<T>(
             IEnumerable<T> collection,
             string separator,
             Func<T, string> converter = null,
@@ -140,6 +140,26 @@ namespace WordUp.Shared
             }
 
             return sb.ToString();
+        }
+        
+        public static IEnumerable<IEnumerable<T>> GetBatches<T>(IEnumerable<T> collection, int batchSize)
+        {
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                yield return GetBatch(enumerator.Current, enumerator, batchSize);
+            }
+        }
+        
+        public static IEnumerable<T> GetBatch<T>(T firstElement, IEnumerator<T> enumerator, int batchSize)
+        {
+            yield return firstElement;
+            int index = 1;
+            while (index < batchSize && enumerator.MoveNext())
+            {
+                yield return enumerator.Current;
+                index++;
+            }
         }
     }
 }

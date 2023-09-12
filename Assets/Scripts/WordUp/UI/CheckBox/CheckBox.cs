@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -96,7 +97,7 @@ namespace WordUp.UI.CheckBox
         {
             selected = !selected;
 
-            OnClick?.Invoke();
+            OnClick?.Invoke(selected);
 
             UpdateState();
         }
@@ -115,7 +116,7 @@ namespace WordUp.UI.CheckBox
             UpdateState();
         }
 
-        public event Action OnClick;
+        public UnityEvent<bool> OnClick;
 
         private void UpdateState()
         {

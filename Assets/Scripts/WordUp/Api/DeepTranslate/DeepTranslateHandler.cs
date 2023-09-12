@@ -5,6 +5,7 @@ using WordUp.Api.Contracts.TranslateMany;
 using WordUp.Api.DeepTranslate.Connector;
 using WordUp.Api.DeepTranslate.Contracts.Translate;
 using WordUp.Shared;
+using WordUp.Shared.StaticShared;
 
 namespace WordUp.Api.DeepTranslate
 {
