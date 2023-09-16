@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using WordUp.Service.Contracts;
 using WordUp.UI;
 using WordUp.UI.ValidationMessageBox;
@@ -24,7 +25,8 @@ namespace WordUp.Shared.StaticShared
         public static void ShowModalValidationMessageBox(
             Canvas canvas,
             ValidationMessageBox validationMessageBoxPrefab,
-            List<Issue> issues)
+            List<Issue> issues, 
+            UnityAction onApplyAction)
         {
             ValidationMessageBox validationMessageBox = CreateInstantiate(validationMessageBoxPrefab, canvas.transform);
 
@@ -35,6 +37,7 @@ namespace WordUp.Shared.StaticShared
                 new Color(0, 0, 0, 0.5f));
 
             validationMessageBox.Construct(issues);
+            validationMessageBox.onApplyAction.AddListener(onApplyAction);
         }
 
         public static void DestroyAllChildren(Transform transform)

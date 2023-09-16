@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using WordUp.Service.Contracts;
 using WordUp.Shared.StaticShared;
@@ -11,14 +12,16 @@ namespace WordUp.UI.ValidationMessageBox
 {
     public class ValidationMessageBox : DestroyedComponent
     {
+        [SerializeField] private Transform content;
+        [SerializeField] private Button buttonApply;
+        [Space]
         [SerializeField] private ValidationMessageBoxItem prefabValidationMessageBoxItem;
         [SerializeField] private Color errorValidationItemColor;
         [SerializeField] private Color warningValidationItemColor;
 
-        public void Construct(
-            ICollection<Issue> validationIssues,
-            bool showError = true,
-            bool showWarning = true)
+        public UnityEvent onApplyAction;
+
+        public void Construct(ICollection<Issue> validationIssues, bool showError = true, bool showWarning = true)
         {
             if (CollectionHelpers.IsNullOrEmpty(validationIssues))
             {
@@ -30,6 +33,22 @@ namespace WordUp.UI.ValidationMessageBox
                 throw new Exception("Any issue must be showed");
             }
 
+            CreateItems(validationIssues, showError, showWarning);
+
+            bool showApplyButton = validationIssues.All(x => x.Type == IssueType.Warning) && showWarning;
+
+            buttonApply.gameObject.SetActive(showApplyButton);
+        }
+
+        public void OnApplyClick()
+        {
+            onApplyAction.Invoke();
+            
+            Destroy();
+        }
+
+        private void CreateItems(ICollection<Issue> validationIssues, bool showError = true, bool showWarning = true)
+        {
             foreach (Issue issue in validationIssues.OrderBy(x=>x.Type))
             {
                 prefabValidationMessageBoxItem.GetComponentInChildren<Image>().IsActive();
@@ -37,14 +56,14 @@ namespace WordUp.UI.ValidationMessageBox
                 if (issue.Type == IssueType.Error && showError)
                 {
                     ValidationMessageBoxItem item =
-                        UIHelper.CreateInstantiate(prefabValidationMessageBoxItem, transform);
+                        UIHelper.CreateInstantiate(prefabValidationMessageBoxItem, content);
                     
                     item.BindProperties(errorValidationItemColor, issue.Text);
                 }
                 else if (issue.Type == IssueType.Warning && showWarning)
                 {
                     ValidationMessageBoxItem item =
-                        UIHelper.CreateInstantiate(prefabValidationMessageBoxItem, transform);
+                        UIHelper.CreateInstantiate(prefabValidationMessageBoxItem, content);
                     
                     item.BindProperties(warningValidationItemColor, issue.Text);
                 }
@@ -54,7 +73,7 @@ namespace WordUp.UI.ValidationMessageBox
         [Inject]
         private void Init()
         {
-            ValidationMessageBoxItem[] items = GetComponentsInChildren<ValidationMessageBoxItem>();
+            ValidationMessageBoxItem[] items = content.GetComponentsInChildren<ValidationMessageBoxItem>();
 
             foreach (ValidationMessageBoxItem item in items)
             {
