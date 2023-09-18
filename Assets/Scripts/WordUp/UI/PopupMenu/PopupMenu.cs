@@ -18,7 +18,7 @@ namespace WordUp.UI.PopupMenu
         [Inject]
         private void Init()
         {
-            AddActionListenerToAllButtons(() => Destroy(this.gameObject));
+            AddActionListenerToAllButtons(Destroy);
         }
     }
 }

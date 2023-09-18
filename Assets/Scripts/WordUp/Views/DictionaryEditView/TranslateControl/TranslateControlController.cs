@@ -20,13 +20,13 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
         
         private bool _translateLock = true;
 
-        public LanguageHelpers.Language SourceLanguage
+        public Language SourceLanguage
         {
             get => languageController.SourceLanguage;
             set => languageController.SourceLanguage = value;
         }
         
-        public LanguageHelpers.Language TargetLanguage
+        public Language TargetLanguage
         {
             get => languageController.TargetLanguage;
             set => languageController.TargetLanguage = value;

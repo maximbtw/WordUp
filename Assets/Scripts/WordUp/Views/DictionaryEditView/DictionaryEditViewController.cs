@@ -43,7 +43,7 @@ namespace WordUp.Views.DictionaryEditView
 
             if (validator.HasIssues)
             {
-                UIHelper.ShowModalValidationMessageBox(_canvas, _validationMessageBox, validator.Issues);
+                UIHelper.ShowModalValidationMessageBox(_canvas, _validationMessageBox, validator.Issues, () => { });
                 
                 return;
             }
@@ -91,8 +91,8 @@ namespace WordUp.Views.DictionaryEditView
 
             checkBoxMarkAutoTranslate.Selected = false;
 
-            translateControlController.SourceLanguage = LanguageHelpers.Language.English;
-            translateControlController.TargetLanguage = LanguageHelpers.Language.Russian;
+            translateControlController.SourceLanguage = Language.English;
+            translateControlController.TargetLanguage = Language.Russian;
 
             translateControlController.SourceText = _modifiedWord.NameEn;
             translateControlController.TargetText = _modifiedWord.NameRu;
@@ -100,11 +100,11 @@ namespace WordUp.Views.DictionaryEditView
         
         private void BindingModelFromControl()
         {
-            string enText = translateControlController.SourceLanguage == LanguageHelpers.Language.English
+            string enText = translateControlController.SourceLanguage == Language.English
                 ? translateControlController.SourceText
                 : translateControlController.TargetText;
             
-            string ruText = translateControlController.SourceLanguage == LanguageHelpers.Language.Russian
+            string ruText = translateControlController.SourceLanguage == Language.Russian
                 ? translateControlController.SourceText
                 : translateControlController.TargetText;
             

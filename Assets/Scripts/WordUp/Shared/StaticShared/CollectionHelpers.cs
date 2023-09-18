@@ -8,6 +8,13 @@ namespace WordUp.Shared.StaticShared
     public static class CollectionHelpers
     {
         public static bool IsNullOrEmpty<T>(ICollection<T> collection) => collection == null || collection.Count == 0;
+
+        public static void ShuffleCollection<T>(IList<T> collection)
+        {
+            var random = new Random();
+            
+            random.Shuffle(collection);
+        }
         
         public static string JoinToString<T>(
             IList<T> collection,
@@ -97,7 +104,7 @@ namespace WordUp.Shared.StaticShared
             var sb = new StringBuilder();
             int index = 0;
             bool added = false;
-            IEnumerator<T> enumerator = collection.GetEnumerator();
+            using IEnumerator<T> enumerator = collection.GetEnumerator();
             while (enumerator.MoveNext())
             {
                 if (maxItems == null || index < maxItems)

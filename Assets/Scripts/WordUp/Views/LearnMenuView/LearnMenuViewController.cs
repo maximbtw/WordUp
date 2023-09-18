@@ -19,13 +19,17 @@ namespace WordUp.Views.LearnMenuView
 
         private LearnMenuGroupItemData _selectedData;
 
-        protected override void LateStart()
+        protected override void LoadDataFromScene(object data)
         {
             contentView ??= GetComponentInChildren<LearnMenuGroupContentView>();
 
-            List<LearnMenuGroupItemData> data = CreateItemsData().ToList();
-            contentView.CreateItems(data, OnItemClick);
-            
+            List<LearnMenuGroupItemData> groupData = CreateItemsData().ToList();
+            contentView.CreateItems(groupData, OnItemClick);
+        }
+
+        protected override object GetDataFromScene()
+        {
+            return _selectedData.Words;
         }
 
         private IEnumerable<LearnMenuGroupItemData> CreateItemsData()
@@ -50,16 +54,10 @@ namespace WordUp.Views.LearnMenuView
            }
         }
 
-
         private void OnItemClick(LearnMenuGroupItem item)
         {
             _selectedData = item.Data;
             LoadSceneAdditive((int)SceneNumber.LearnGroupView);
-        }
-
-        protected override object GetDataFromScene()
-        {
-            return _selectedData.Words;
         }
     }
 }

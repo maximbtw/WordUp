@@ -93,6 +93,11 @@ namespace WordUp.UI.WordList
             }
         }
 
+        public List<WordDto> GetDataSource()
+        {
+            return _items.Select(x => x.Value.Word).ToList();
+        }
+
         private void Refresh()
         {
             var visibleItems = _items

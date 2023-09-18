@@ -61,5 +61,22 @@ namespace WordUp.Service.Word
             
             Save();
         }
+
+        public void CreateMany(ICollection<WordDto> models)
+        {
+            foreach (WordDto model in models)
+            {
+                model.Guid = Guid.NewGuid();
+                
+                this.Cache.Add(model);
+            }
+            
+            Save();
+        }
+
+        public IEnumerable<WordDto> GetModelsByGuids(IEnumerable<Guid> guids)
+        {
+            return GetModels().Where(x => guids.Contains(x.Guid));
+        }
     }
 }

@@ -14,12 +14,12 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
         [SerializeField] private Button sourceLanguageButton;
         [SerializeField] private Button targetLanguageButton;
 
-        private LanguageHelpers.Language _sourceLanguage;
-        private LanguageHelpers.Language _targetLanguage;
+        private Language _sourceLanguage;
+        private Language _targetLanguage;
 
         public UnityEvent languageTextChanged;
         
-        public LanguageHelpers.Language SourceLanguage
+        public Language SourceLanguage
         {
             get => _sourceLanguage;
             set
@@ -29,7 +29,7 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
             }
         }
         
-        public LanguageHelpers.Language TargetLanguage
+        public Language TargetLanguage
         {
             get => _targetLanguage;
             set
@@ -41,7 +41,7 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
 
         private void Start()
         {
-            this.SourceLanguage = LanguageHelpers.Language.English;
+            this.SourceLanguage = Language.English;
             
             sourceLanguageButton.onClick.AddListener(ChangeLanguage);
             targetLanguageButton.onClick.AddListener(ChangeLanguage);
@@ -49,15 +49,15 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
 
         private void ChangeLanguage()
         {
-            if (this.SourceLanguage == LanguageHelpers.Language.English)
+            if (this.SourceLanguage == Language.English)
             {
-                this.SourceLanguage = LanguageHelpers.Language.Russian;
-                this.TargetLanguage = LanguageHelpers.Language.English;
+                this.SourceLanguage = Language.Russian;
+                this.TargetLanguage = Language.English;
             }
             else
             {
-                this.SourceLanguage = LanguageHelpers.Language.English;
-                this.TargetLanguage = LanguageHelpers.Language.Russian;
+                this.SourceLanguage = Language.English;
+                this.TargetLanguage = Language.Russian;
             }
             
             languageTextChanged?.Invoke();
@@ -65,7 +65,7 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
 
         private void UpdateVisibleLanguage()
         {
-            if (this.SourceLanguage == LanguageHelpers.Language.English)
+            if (this.SourceLanguage == Language.English)
             {
                 sourceLanguageButton.GetComponentInChildren<TextMeshProUGUI>().text = EnLanguageNameTitle;
                 targetLanguageButton.GetComponentInChildren<TextMeshProUGUI>().text = RuLanguageNameTitle;

@@ -10,6 +10,8 @@
         ProfileView = 5,
         LearnMenuView = 6,
         LearnGroupView = 7,
-        LearnGameView = 8
+        LearnTestMenu = 8,
+        LearnGameView = 9,
+        LearnGameCompleteView = 10
     }
 }

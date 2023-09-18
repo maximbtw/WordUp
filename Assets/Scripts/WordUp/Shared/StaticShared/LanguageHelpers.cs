@@ -10,6 +10,8 @@ namespace WordUp.Shared.StaticShared
 
         public static Language GetLanguageByString(string text)
         {
+            text = Regex.Replace(text, "[^0-9a-zA-ZА-Яа-я]+", "");
+            
             bool isEnglish = Regex.IsMatch(text, "^[a-zA-Z0-9]*$");
 
             if (isEnglish)
@@ -17,7 +19,7 @@ namespace WordUp.Shared.StaticShared
                 return Language.English;
             }
             
-            bool isRussian = Regex.IsMatch(text, "^[А-Яа-я]+$");
+            bool isRussian = Regex.IsMatch(text, "^[А-Яа-я0-9]+$");
 
             if (isRussian)
             {
@@ -36,12 +38,12 @@ namespace WordUp.Shared.StaticShared
                 _ => throw new Exception("Unexpected language")
             };
         }
-        
-        public enum Language
-        {
-            English,
-            Russian,
-            Other
-        }
+    }
+    
+    public enum Language
+    {
+        English,
+        Russian,
+        Other
     }
 }

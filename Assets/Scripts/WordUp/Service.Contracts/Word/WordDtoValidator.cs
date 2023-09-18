@@ -11,7 +11,7 @@ namespace WordUp.Service.Contracts.Word
             {
                 AddError(ref issues, "Russian name must be provided");
             }
-            else if (LanguageHelpers.GetLanguageByString(model.NameRu) != LanguageHelpers.Language.Russian)
+            else if (LanguageHelpers.GetLanguageByString(model.NameRu) != Language.Russian)
             {
                 AddError(ref issues, "The word in Russian should be in Russian");
             }
@@ -20,7 +20,7 @@ namespace WordUp.Service.Contracts.Word
             {
                 AddError(ref issues, "English name must be provided");
             }
-            else if (LanguageHelpers.GetLanguageByString(model.NameEn) != LanguageHelpers.Language.English)
+            else if (LanguageHelpers.GetLanguageByString(model.NameEn) != Language.English)
             {
                 AddError(ref issues, "The word in English should be in English");
             }

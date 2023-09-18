@@ -6,10 +6,11 @@ namespace WordUp
     public class DestroyedComponent : MonoBehaviour
     {
         public UnityEvent onDestroyObject;
-        
-        private void OnDestroy()
+        public void Destroy()
         {
             onDestroyObject?.Invoke();
+            
+            Destroy(this.gameObject);
         }
     }
 }

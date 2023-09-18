@@ -53,19 +53,20 @@ namespace WordUp.Views.SettingsView
             _modificationModel.CountWordInGroup = int.Parse(newText);
         }
 
-        public void Save()
+        public void OnSaveClick()
         {
             var validator = new SettingsDtoValidator();
             validator.Validate(_modificationModel);
 
             if (validator.HasIssues)
             {
-                UIHelper.ShowModalValidationMessageBox(_canvas, _validationMessageBox, validator.Issues);
+                UIHelper.ShowModalValidationMessageBox(_canvas, _validationMessageBox, validator.Issues, () => { });
 
                 return;
             }
 
             _settingsService.Update(_modificationModel);
+            UnloadScene((int)SceneNumber.SettingsView);
         }
 
         public void ChangeSoundSettings()
