@@ -22,6 +22,7 @@ namespace WordUp.Views.LearnGameView
         private LearnGameCompleteData _completeData;
         private List<WordDto> _words;
         private LearnGameData _gameData;
+        private int _indexCard;
 
         protected override object GetDataFromScene()
         {
@@ -36,22 +37,16 @@ namespace WordUp.Views.LearnGameView
             {
                 if (again)
                 {
-                    _completeData.Clear();
-                    UpdateWordsByService();
-                    CreateTest();
+                    RefreshTest();
                 }
                 else
                 {
-                    UnloadScene();
+                    UnloadScene((int)SceneNumber.LearnGameView);
                 }
             }
             else if (data is LearnGameData gameData)
             {
-                _gameData = gameData;
-                _words = gameData.Words;
-
-                UpdateWordsByGameData();
-                CreateTest();
+                InitTestFromGameData(gameData);
             }
             else
             {
@@ -59,27 +54,63 @@ namespace WordUp.Views.LearnGameView
             }
         }
 
+        private void RefreshTest()
+        {
+            _completeData.Clear();
+            _completeData.maxCount = _gameData.MaxWords;
+            _indexCard = 0;
+            
+            UpdateWordsByService();
+            CreateTest();
+        }
+
+        private void InitTestFromGameData(LearnGameData gameData)
+        {
+            _gameData = gameData;
+            _words = gameData.Words;
+            _completeData.maxCount = gameData.MaxWords;
+
+            UpdateWordsByGameData();
+            CreateTest();
+        }
+
         private void CreateTest()
         {
-            _completeData.maxCount = _words.Count;
+            AddCard();
+            AddCard();
+        }
 
-            for (int i = _words.Count - 1; i >= 0; i--)
+        private void AddCard()
+        {
+            if (_indexCard == _words.Count)
             {
-                LearnGameCard card = UIHelper.CreateInstantiate(cardPrefab, transform);
-
-                card.gameObject.name = $"Card_{i + 1}";
-
-                card.Data = new LearnGameCardData
-                {
-                    Word = _words[i],
-                    MaxNumber = _words.Count,
-                    Number = i + 1,
-                    SourceLanguage = _gameData.SourceLanguage,
-                    EndClickAction = OnCompleteTest,
-                    BackClickAction = UnloadScene,
-                    SwipeAction = OnSwipe
-                };
+                return;
             }
+
+            var currentWord = _words[_indexCard];
+            CreateCard(currentWord, _indexCard + 1);
+
+            _indexCard++;
+        }
+
+        private void CreateCard(WordDto word, int number)
+        {
+            LearnGameCard card = UIHelper.CreateInstantiate(cardPrefab, transform);
+
+            card.gameObject.name = $"Card_{number}";
+
+            card.Data = new LearnGameCardData
+            {
+                Word = word,
+                MaxNumber = _words.Count,
+                Number = number,
+                SourceLanguage = _gameData.SourceLanguage,
+                EndClickAction = OnCompleteTest,
+                BackClickAction = () => UnloadScene((int)SceneNumber.LearnGameView),
+                SwipeAction = OnSwipe
+            };
+            
+            card.transform.SetSiblingIndex(0);
         }
 
         private void UpdateWordsByService()
@@ -99,10 +130,7 @@ namespace WordUp.Views.LearnGameView
                 CollectionHelpers.ShuffleCollection(_words);
             }
 
-            if (_gameData.MaxWords != null)
-            {
-                _words = _words.Take((int)_gameData.MaxWords).ToList();
-            }
+            _words = _words.Take(_gameData.MaxWords).ToList();
         }
 
         private void OnSwipe(WordDto modifiedWord, bool successSwipe)
@@ -122,6 +150,8 @@ namespace WordUp.Views.LearnGameView
             {
                 _completeData.successCount++;
             }
+
+            AddCard();
         }
 
         private void OnCompleteTest()
@@ -129,13 +159,6 @@ namespace WordUp.Views.LearnGameView
             _data = _completeData;
             
             LoadSceneAdditive((int)SceneNumber.LearnGameCompleteView);
-        }
-        
-        private void UnloadScene()
-        {
-            _data = _words;
-            
-            UnloadScene((int)SceneNumber.LearnGameView);
         }
     }
 }

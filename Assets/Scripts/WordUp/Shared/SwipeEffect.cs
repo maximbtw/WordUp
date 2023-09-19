@@ -37,7 +37,7 @@ namespace WordUp.Shared
         public void OnEndDrag(PointerEventData eventData)
         {
             _distanceMoved = Mathf.Abs(transform.localPosition.x - _initialPosition.x);
-            if (_distanceMoved < 0.4 * Screen.width)
+            if (_distanceMoved < 0.1 * Screen.width)
             {
                 transform.localPosition = _initialPosition;
             }

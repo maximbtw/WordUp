@@ -2314,6 +2314,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 155.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6016749637136545013, guid: 526908ec4de70164f8deba196714f979, type: 3}
+      propertyPath: m_CharacterLimit
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5678180341440549663, guid: 526908ec4de70164f8deba196714f979, type: 3}

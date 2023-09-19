@@ -62,14 +62,25 @@ namespace WordUp.Views.DictionaryEditView
             {
                 _modifiedWord = new WordDto();
                 
+                BindingModelToControl();
+                
                 return;
             }
             
-            if (data is not WordDto word)
+            if (data is WordDto word)
             {
-                throw new ArgumentException();
+                InitWord(word);
+                
+                BindingModelToControl();
+                
+                return;
             }
-            
+
+            throw new ArgumentException(nameof(data));
+        }
+
+        private void InitWord(WordDto word)
+        {
             _savedWord = word;
             // TODO: Deep clone
             _modifiedWord = new WordDto
@@ -80,8 +91,6 @@ namespace WordUp.Views.DictionaryEditView
                 NameEn = _savedWord.NameEn,
                 NameRu = _savedWord.NameRu
             };
-
-            BindingModelToControl();
         }
         
         private void BindingModelToControl()

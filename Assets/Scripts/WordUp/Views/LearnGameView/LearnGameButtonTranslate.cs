@@ -8,8 +8,6 @@ namespace WordUp.Views.LearnGameView
     {
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI text;
-
-        public bool AnyTimeClicked => _anyTimeClicked;
         
         private LearnGameCard _card;
         private bool _anyTimeClicked;

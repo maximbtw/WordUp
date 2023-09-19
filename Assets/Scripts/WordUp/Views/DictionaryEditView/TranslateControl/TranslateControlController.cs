@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using WordUp.Api;
 using WordUp.Api.Contracts.Translate;
+using WordUp.Shared;
 using WordUp.Shared.StaticShared;
 using Zenject;
 
@@ -17,8 +18,9 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
         [Inject] private IExternalSystemHandler _externalSystemHandler;
         
         private bool _autoTranslate;
-        
-        private bool _translateLock = true;
+
+        private string _previousTextOnControl = string.Empty;
+        private TimerInvoker _timer;
 
         public Language SourceLanguage
         {
@@ -59,46 +61,55 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
         {
             languageController = GetComponent<TranslateControlLanguageController>();
 
-            languageController.languageTextChanged.AddListener(() => SourceLanguageTextFieldValueChanged(sourceLanguageTextField.text));
+            languageController.languageTextChanged.AddListener(SwitchText);
             sourceLanguageTextField.onValueChanged.AddListener(SourceLanguageTextFieldValueChanged);
+
+            _timer = new TimerInvoker();
+            _timer.BindAction(seconds: 1f, TryUpdateTranslate);
         }
 
-        private async void SourceLanguageTextFieldValueChanged(string newText)
+        private void SwitchText()
         {
-            _translateLock = false;
-            if (!this.AutoTranslate)
-            {
-                _translateLock = true;
-                
-                return;
-            }
-            
-            if (string.IsNullOrEmpty(newText))
-            {
-                SetTranslatedText(string.Empty);
-                _translateLock = true;
-                
-                return;
-            }
-            
-            var languageNewText = LanguageHelpers.GetLanguageByString(newText);
+           string sourceText = sourceLanguageTextField.text;
+           string targetText = targetLanguageTextField.text;
 
-            if (languageNewText != languageController.SourceLanguage)
-            {
-                SetTranslatedText(newText);
-                _translateLock = true;
-                
-                return;
-            }
+           sourceLanguageTextField.text = targetText;
+           targetLanguageTextField.text = sourceText;
 
-            SetTranslatedText(await Translate(newText));
+           SourceLanguageTextFieldValueChanged(targetText);
+        }
 
-            void SetTranslatedText(string translatedText)
+        private void Update()
+        {
+            _timer.Update();
+        }
+
+        private async void TryUpdateTranslate()
+        {
+            string currentText = sourceLanguageTextField.text;
+            var languageCurrentText = LanguageHelpers.GetLanguageByString(currentText);
+
+            bool needUpdateTextByExternalResource =
+                this.AutoTranslate && 
+                !string.IsNullOrEmpty(currentText) &&
+                !_previousTextOnControl.Equals(currentText) && 
+                languageCurrentText == languageController.SourceLanguage;
+
+            if (needUpdateTextByExternalResource)
             {
-                if (!_translateLock)
+                if (!_previousTextOnControl.Equals(currentText))
                 {
-                    targetLanguageTextField.text = translatedText;
+                    _previousTextOnControl = currentText;
                 }
+                
+                string newText = await Translate(currentText);
+
+                if (!currentText.Equals(_previousTextOnControl))
+                {
+                    TryUpdateTranslate();
+                }
+                
+                targetLanguageTextField.text = newText;
             }
         }
 
@@ -121,6 +132,22 @@ namespace WordUp.Views.DictionaryEditView.TranslateControl
             Debug.LogError($"Error while translate: {response.Error}");
             
             return string.Empty;
+        }
+
+        void SourceLanguageTextFieldValueChanged(string newText)
+        {
+            if (!this.AutoTranslate)
+            {
+                return;
+            }
+            
+            Language languageCurrentText = LanguageHelpers.GetLanguageByString(newText);
+            bool repeatText = languageCurrentText != languageController.SourceLanguage || string.IsNullOrEmpty(newText);
+
+            if (repeatText)
+            {
+                targetLanguageTextField.text = newText;
+            }
         }
 
         private void AutoTranslateChanged()

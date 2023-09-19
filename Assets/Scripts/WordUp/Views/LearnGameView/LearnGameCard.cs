@@ -14,7 +14,6 @@ namespace WordUp.Views.LearnGameView
         [SerializeField] private CheckBoxSlider checkBoxSliderMarkAsLearned;
         [SerializeField] private Button buttonEnd;
         [SerializeField] private Button buttonBack;
-        [SerializeField] private LearnGameButtonTranslate buttonTranslate;
         [SerializeField] private TextMeshProUGUI textNumber;
         [SerializeField] private TextMeshProUGUI textSourceWord;
 
@@ -65,8 +64,6 @@ namespace WordUp.Views.LearnGameView
                 IsHard = checkBoxSliderMarkAsHard.Selected,
                 IsLearned = checkBoxSliderMarkAsLearned.Selected
             };
-
-            swipeSuccess &= !buttonTranslate.AnyTimeClicked;
 
             _data.SwipeAction.Invoke(modifiedWord, swipeSuccess);
 

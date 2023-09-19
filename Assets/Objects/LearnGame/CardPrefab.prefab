@@ -461,7 +461,6 @@ MonoBehaviour:
   checkBoxSliderMarkAsLearned: {fileID: 2591052395492014707}
   buttonEnd: {fileID: 7646312010384032208}
   buttonBack: {fileID: 6513792306292220851}
-  buttonTranslate: {fileID: 5893703458579848455}
   textNumber: {fileID: 1921506794870598261}
   textSourceWord: {fileID: 5893222632607705082}
   onDataSet:
@@ -1569,7 +1568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 70705d1abd1851540b8655911e3286f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 683d48a999043b244bc6d362408ceb3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

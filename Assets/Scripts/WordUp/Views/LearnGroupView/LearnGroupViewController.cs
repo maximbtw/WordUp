@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,7 @@ namespace WordUp.Views.LearnGroupView
         [Inject] private ValidationMessageBox _validationMessageBox;
 
         private LearnGameData _gameData;
+        private List<WordDto> _words;
         
         public void OnStartButtonClick()
         {
@@ -64,13 +66,18 @@ namespace WordUp.Views.LearnGroupView
 
         protected override void LoadDataFromScene(object data)
         {
-            if (data is not List<WordDto> words)
+            if (data is List<WordDto> words)
             {
-                return;
+                _words = words;
+            }
+
+            if (_words == null)
+            {
+                throw new ArgumentException(nameof(data));
             }
             
-            wordList.LoadItems(words);
-            textMeshProCount.text = $"{words.Count(x => x.IsLearned)}/{words.Count}";
+            wordList.LoadItems(_words);
+            textMeshProCount.text = $"{_words.Count(x => x.IsLearned)}/{_words.Count}";
         }
 
 
@@ -79,6 +86,7 @@ namespace WordUp.Views.LearnGroupView
             _gameData = new LearnGameData
             {
                 Words = matchedWords,
+                MaxWords = matchedWords.Count,
                 Shuffle = checkBoxShuffle.Selected,
                 SourceLanguage = checkBoxShowInRussian.Selected
                     ? Language.Russian

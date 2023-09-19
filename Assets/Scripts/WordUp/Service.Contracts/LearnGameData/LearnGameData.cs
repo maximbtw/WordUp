@@ -10,7 +10,7 @@ namespace WordUp.Service.Contracts.LearnGameData
         
         public Language SourceLanguage { get; set; }
         
-        public int? MaxWords { get; set; }
+        public int MaxWords { get; set; }
 
         public List<WordDto> Words { get; set; } = new();
     }

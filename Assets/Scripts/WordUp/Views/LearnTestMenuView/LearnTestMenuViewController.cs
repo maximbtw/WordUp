@@ -59,7 +59,7 @@ namespace WordUp.Views.LearnTestMenuView
             return _gameData;
         }
 
-        protected override void LoadDataFromScene(object data)
+        protected override void LateStart()
         {
             inputFieldCountWord.text = _wordService.GetModels().Count().ToString();
         }

@@ -16,25 +16,23 @@ namespace WordUp.Views.LearnMenuView
         public void CreateItems(List<LearnMenuGroupItemData> items, UnityAction<LearnMenuGroupItem> onItemClick)
         {
             UIHelper.DestroyAllChildren(rowContentTransform);
-            
-            Transform currentRow = rowContentTransform;
-            currentRow.gameObject.name = "ContentRow_1";
-            
-            for (int i = 0; i < items.Count; i++)
-            {
-                LearnMenuGroupItemData itemData = items[i];
+            UIHelper.DestroyAllChildren(columnContentTransform);
 
-                if (i % 3 == 0 && i != 0)
+            Transform currentRow = null;
+
+            for (int index = 0; index < items.Count; index++)
+            {
+                if (index % 3 == 0)
                 {
                     currentRow = Instantiate(rowContentTransform, columnContentTransform);
                     UIHelper.DestroyAllChildren(currentRow);
-                    currentRow.gameObject.name = $"ContentRow_{(i / 3) + 1}";
+                    currentRow.gameObject.name = $"ContentRow_{index / 3 + 1}";
                 }
 
                 LearnMenuGroupItem item = UIHelper.CreateInstantiate(itemPrefab, currentRow);
-                item.gameObject.name = $"Item_{i+1}";
-                
-                item.Data = itemData;
+                item.gameObject.name = $"Item_{index + 1}";
+
+                item.Data = items[index];
                 var itemButton = item.GetComponent<Button>();
                 itemButton.onClick.AddListener(() => onItemClick(item));
             }
