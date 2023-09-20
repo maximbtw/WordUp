@@ -82,15 +82,7 @@ namespace WordUp.Views.DictionaryEditView
         private void InitWord(WordDto word)
         {
             _savedWord = word;
-            // TODO: Deep clone
-            _modifiedWord = new WordDto
-            {
-                Guid = _savedWord.Guid,
-                IsHard = _savedWord.IsHard,
-                IsLearned = _savedWord.IsLearned,
-                NameEn = _savedWord.NameEn,
-                NameRu = _savedWord.NameRu
-            };
+            _modifiedWord = _savedWord.DeepClone();
         }
         
         private void BindingModelToControl()

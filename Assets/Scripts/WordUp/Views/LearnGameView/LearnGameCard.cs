@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using WordUp.Service.Contracts.Word;
 using WordUp.Shared;
+using WordUp.Shared.StaticShared;
 using WordUp.UI.CheckBox;
 
 namespace WordUp.Views.LearnGameView
@@ -55,15 +56,10 @@ namespace WordUp.Views.LearnGameView
 
         private void Swipe(bool swipeSuccess)
         {
-            // TODO: Deep Clone
-            var modifiedWord = new WordDto
-            {
-                Guid = _data.Word.Guid,
-                NameRu = _data.Word.NameRu,
-                NameEn = _data.Word.NameEn,
-                IsHard = checkBoxSliderMarkAsHard.Selected,
-                IsLearned = checkBoxSliderMarkAsLearned.Selected
-            };
+            var modifiedWord = _data.Word.DeepClone();
+            
+            modifiedWord.IsHard = checkBoxSliderMarkAsHard.Selected;
+            modifiedWord.IsLearned = checkBoxSliderMarkAsLearned.Selected;
 
             _data.SwipeAction.Invoke(modifiedWord, swipeSuccess);
 

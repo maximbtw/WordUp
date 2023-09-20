@@ -4,6 +4,7 @@ using System.ComponentModel;
 namespace WordUp.Service.Contracts.Settings
 {
     [DisplayName("Settings")]
+    [Serializable]
     public class SettingsDto : IModelDto
     {
         public Guid Guid { get; set; }

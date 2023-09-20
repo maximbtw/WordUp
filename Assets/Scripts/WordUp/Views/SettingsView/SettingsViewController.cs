@@ -24,14 +24,7 @@ namespace WordUp.Views.SettingsView
         protected override void LateStart()
         {
             _saveModel = _settingsService.GetModel();
-
-            // TODO: DeepClone
-            _modificationModel = new SettingsDto
-            {
-                Guid = _saveModel.Guid,
-                CountWordInGroup = _saveModel.CountWordInGroup,
-                SoundActive = _saveModel.SoundActive
-            };
+            _modificationModel = _saveModel.DeepClone();
             
             UpdateBindings();
         }

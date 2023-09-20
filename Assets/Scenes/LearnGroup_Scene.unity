@@ -552,6 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1370757496}
   validationMessageBox: {fileID: 5405220739045226382, guid: 2caae9109b62e434f956f6318aaed9ef, type: 3}
+  popupMenu: {fileID: 8389788504404929069, guid: 1879fd92d509f044697d2aa15a35fd18, type: 3}
 --- !u!1 &785470263
 GameObject:
   m_ObjectHideFlags: 0

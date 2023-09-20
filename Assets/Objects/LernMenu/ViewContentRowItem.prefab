@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 2256511624466035196}
   - component: {fileID: 2035724628455049631}
   - component: {fileID: 5269205736441542512}
+  - component: {fileID: 8887733669463308318}
   m_Layer: 5
   m_Name: ViewContentRowItem
   m_TagString: Untagged
@@ -486,6 +487,7 @@ MonoBehaviour:
   iconImage: {fileID: 1610411115042297405}
   numberTextMP: {fileID: 7245674736473065984}
   statTextMP: {fileID: 4984490678417485078}
+  outline: {fileID: 8887733669463308318}
 --- !u!114 &5269205736441542512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,3 +532,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8887733669463308318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902597100205666986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.427451, g: 0.5803922, b: 0.98823535, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1

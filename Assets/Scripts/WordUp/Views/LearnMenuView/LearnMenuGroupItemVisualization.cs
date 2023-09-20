@@ -18,6 +18,7 @@ namespace WordUp.Views.LearnMenuView
         [SerializeField] private Image iconImage;
         [SerializeField] private TextMeshProUGUI numberTextMP;
         [SerializeField] private TextMeshProUGUI statTextMP;
+        [SerializeField] private Outline outline;
 
         private LearnMenuGroupItem _item;
 
@@ -35,6 +36,7 @@ namespace WordUp.Views.LearnMenuView
                 numberTextMP.color = completedTextColor;
                 statTextMP.color = completedTextColor;
                 statTextMP.fontStyle = FontStyles.Bold;
+                outline.effectColor = completedTextColor;
             }
             else
             {
@@ -43,6 +45,7 @@ namespace WordUp.Views.LearnMenuView
                 numberTextMP.color = defaultTextColor;
                 statTextMP.color = defaultTextColor;
                 statTextMP.fontStyle = FontStyles.Normal;
+                outline.effectColor = defaultTextColor;
             }
 
             numberTextMP.text = data.number.ToString();

@@ -3,10 +3,11 @@ using System.Linq;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using WordUp.Service.Contracts.LearnGameData;
 using WordUp.Service.Contracts.Word;
+using WordUp.Service.Word;
 using WordUp.Shared.StaticShared;
+using WordUp.UI;
 using WordUp.UI.CheckBox;
 using WordUp.UI.ValidationMessageBox;
 using WordUp.UI.WordList;
@@ -21,11 +22,13 @@ namespace WordUp.Views.LearnGroupView
         [Space] 
         [SerializeField] private CheckBoxSlider checkBoxOnlyHard;
         [SerializeField] private CheckBoxSlider checkBoxOnlyUnlearned;
-        [FormerlySerializedAs("checkBoxSort")] [SerializeField] private CheckBoxSlider checkBoxShuffle;
+        [SerializeField] private CheckBoxSlider checkBoxShuffle;
         [SerializeField] private CheckBoxSlider checkBoxShowInRussian;
 
+        [Inject] private IWordService _wordService;
         [Inject] private Canvas _canvas;
         [Inject] private ValidationMessageBox _validationMessageBox;
+        [Inject] private LearnGroupViewPopupMenu _popupMenu;
 
         private LearnGameData _gameData;
         private List<WordDto> _words;
@@ -80,6 +83,10 @@ namespace WordUp.Views.LearnGroupView
             textMeshProCount.text = $"{_words.Count(x => x.IsLearned)}/{_words.Count}";
         }
 
+        protected override void LateStart()
+        {
+            wordList.onItemClick.AddListener(ShowPopupMenu);
+        }
 
         private void SetGameData(List<WordDto> matchedWords)
         {
@@ -112,6 +119,39 @@ namespace WordUp.Views.LearnGroupView
             }
 
             return true;
+        }
+        
+        private void ShowPopupMenu(WordDto selectedWord)
+        {
+            var popupMenu = UIHelper.CreateInstantiate(_popupMenu, _canvas.transform);
+            
+            popupMenu.ButtonChangeLearnedMarkWord.onClick.AddListener(() => MarkAsLearned(selectedWord));
+            popupMenu.ButtonChangeHardMarkWord.onClick.AddListener(() => MarkAsHard(selectedWord));
+            
+            //TODO: ChangePosition
+            popupMenu.transform.localPosition = new Vector2(0, 0);
+
+            ModalWindow.Construct(
+                _canvas,
+                popupMenu,
+                readOnly: false,
+                new Color(0, 0, 0, 0.5f));
+        }
+        
+        private void MarkAsLearned(WordDto word)
+        {
+            word.IsLearned = !word.IsLearned;
+            
+            _wordService.CreateOrUpdate(word);
+            wordList.CreateOrUpdateItem(word);
+        }
+
+        private void MarkAsHard(WordDto word)
+        {
+            word.IsHard = !word.IsHard;
+            
+            _wordService.CreateOrUpdate(word);
+            wordList.CreateOrUpdateItem(word);
         }
     }
 }

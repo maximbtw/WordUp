@@ -4,9 +4,10 @@ using System.ComponentModel;
 namespace WordUp.Service.Contracts.Word
 {
     [DisplayName("Items")]
+    [Serializable]
     public class WordDto : IModelDto
     {
-        public static WordDto DefaultWord = new()
+        public static readonly WordDto DefaultWord = new()
         {
             NameEn = "Example",
             NameRu = "Пример",
