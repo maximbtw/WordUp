@@ -19,10 +19,16 @@ namespace WordUp.UI.ValidationMessageBox
         [SerializeField] private Color errorValidationItemColor;
         [SerializeField] private Color warningValidationItemColor;
 
-        public UnityEvent onApplyAction;
+        private UnityAction _onApplyAction;
 
-        public void Construct(ICollection<Issue> validationIssues, bool showError = true, bool showWarning = true)
+        public void Construct(
+            ICollection<Issue> validationIssues, 
+            UnityAction onApplyAction, 
+            bool showError = true, 
+            bool showWarning = true)
         {
+            _onApplyAction = onApplyAction;
+            
             if (CollectionHelpers.IsNullOrEmpty(validationIssues))
             {
                 throw new Exception("Validation Issues must me provided");
@@ -42,7 +48,7 @@ namespace WordUp.UI.ValidationMessageBox
 
         public void OnApplyClick()
         {
-            onApplyAction.Invoke();
+            _onApplyAction();
             
             Destroy();
         }

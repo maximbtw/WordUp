@@ -10,6 +10,7 @@ namespace WordUp.Views.LearnMenuView
     public class LearnMenuGroupContentView : UIBehaviour
     {
         [SerializeField] private LearnMenuGroupItem itemPrefab;
+        [SerializeField] private LearnMenuGroupItem itemEmptyPrefab;
         [SerializeField] private Transform rowContentTransform;
         [SerializeField] private Transform columnContentTransform;
 
@@ -35,6 +36,17 @@ namespace WordUp.Views.LearnMenuView
                 item.Data = items[index];
                 var itemButton = item.GetComponent<Button>();
                 itemButton.onClick.AddListener(() => onItemClick(item));
+            }
+
+            int emptyItems = 3- items.Count % 3;
+
+            if (emptyItems > 0)
+            {
+                for (int i = 0; i < emptyItems; i++)
+                {
+                    LearnMenuGroupItem emptyItem = UIHelper.CreateInstantiate(itemEmptyPrefab, currentRow);
+                    emptyItem.gameObject.name = "Item_Empty";
+                }
             }
         }
     }

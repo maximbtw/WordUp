@@ -1,7 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using WordUp.Shared.StaticShared;
 
 namespace WordUp.UI.ConfirmedMessageBox
 {
@@ -9,16 +8,17 @@ namespace WordUp.UI.ConfirmedMessageBox
     {
         [SerializeField] private TextMeshProUGUI textMessage;
         
-        public UnityEvent onApplyAction;
+        private UnityAction _onApplyAction;
         
-        public void Construct(string message)
+        public void Construct(string message, UnityAction onApplyAction)
         {
             textMessage.text = message;
+            _onApplyAction = onApplyAction;
         }
         
         public void OnApplyClick()
         {
-            onApplyAction.Invoke();
+            _onApplyAction();
             
             Destroy();
         }

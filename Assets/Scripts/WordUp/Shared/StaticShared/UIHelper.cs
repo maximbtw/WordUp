@@ -26,18 +26,19 @@ namespace WordUp.Shared.StaticShared
             Canvas canvas,
             ValidationMessageBox validationMessageBoxPrefab,
             List<Issue> issues, 
-            UnityAction onApplyAction)
+            UnityAction onApplyAction,
+            bool showError = true, 
+            bool showWarning = true)
         {
             ValidationMessageBox validationMessageBox = CreateInstantiate(validationMessageBoxPrefab, canvas.transform);
-
+            
+            validationMessageBox.Construct(issues, onApplyAction, showError, showWarning);
+            
             ModalWindow.Construct(
                 canvas,
                 validationMessageBox,
                 readOnly: true,
                 new Color(0, 0, 0, 0.5f));
-
-            validationMessageBox.Construct(issues);
-            validationMessageBox.onApplyAction.AddListener(onApplyAction);
         }
 
         public static void ShowConfirmedMessageBox(
@@ -47,11 +48,10 @@ namespace WordUp.Shared.StaticShared
             UnityAction onApplyAction)
         {
             ConfirmedMessageBox messageBox = CreateInstantiate(confirmedMessageBoxPrefab, canvas.transform);
-
+            
+            messageBox.Construct(text, onApplyAction);
+            
             ModalWindow.Construct(canvas, messageBox, readOnly: true, new Color(0, 0, 0, 0.5f));
-
-            messageBox.Construct(text);
-            messageBox.onApplyAction.AddListener(onApplyAction);
         }
 
         public static void DestroyAllChildren(Transform transform)

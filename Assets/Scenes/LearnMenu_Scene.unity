@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 5
+    m_Bottom: 5
   m_ChildAlignment: 0
   m_Spacing: 100
   m_ChildForceExpandWidth: 1
@@ -457,6 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2256511624466035196, guid: 0e6c445d9e23426498899c7746002379, type: 3}
+  itemEmptyPrefab: {fileID: 2256511624466035196, guid: ff9155b5869df2042ba7bb7b8884371e, type: 3}
   rowContentTransform: {fileID: 5773902903376812767, guid: 9caabf54ca9a051488ed5759abc8ed2b, type: 3}
   columnContentTransform: {fileID: 300050469}
 --- !u!114 &303067869
