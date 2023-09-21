@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LearnGameComplete_Scene.unity
     guid: 6c4123d637c5cff4c9848d922b59dcf7
+  - enabled: 1
+    path: Assets/Scenes/ExtensionSettings_Scene.unity
+    guid: 0213630d483ae874da4f5983706a53bf
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 6535fd2e98511a945adf93ce625b8d66, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 67d28a2ce3a492647b4b4a758ae03b63, type: 2}

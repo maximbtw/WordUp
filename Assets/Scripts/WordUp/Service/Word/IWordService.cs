@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using WordUp.Service.Contracts.Word;
 
@@ -12,6 +11,8 @@ namespace WordUp.Service.Word
         IEnumerable<WordDto> GetModels();
         
         bool Delete(Guid guid);
+        
+        void DeleteAll();
         
         void CreateOrUpdate(WordDto model);
 

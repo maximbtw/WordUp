@@ -1666,6 +1666,10 @@ PrefabInstance:
       propertyPath: m_Inertia
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543528749013646170, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_DecelerationRate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2280987131023246858, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
       propertyPath: m_Name
       value: WordList
@@ -1981,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8118463493509370790, guid: e0bbabf212635da44bd1f2fd658a0ee0, type: 3}
       propertyPath: text
-      value: Show on Russian
+      value: Reverse
       objectReference: {fileID: 0}
     - target: {fileID: 8118463493509370790, guid: e0bbabf212635da44bd1f2fd658a0ee0, type: 3}
       propertyPath: colorBlock.normalColor.a

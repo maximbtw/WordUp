@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using WordUp.Service.Contracts;
 using WordUp.UI;
+using WordUp.UI.ConfirmedMessageBox;
 using WordUp.UI.ValidationMessageBox;
 using Zenject;
 using Object = UnityEngine.Object;
@@ -38,6 +38,20 @@ namespace WordUp.Shared.StaticShared
 
             validationMessageBox.Construct(issues);
             validationMessageBox.onApplyAction.AddListener(onApplyAction);
+        }
+
+        public static void ShowConfirmedMessageBox(
+            Canvas canvas, 
+            ConfirmedMessageBox confirmedMessageBoxPrefab, 
+            string text,
+            UnityAction onApplyAction)
+        {
+            ConfirmedMessageBox messageBox = CreateInstantiate(confirmedMessageBoxPrefab, canvas.transform);
+
+            ModalWindow.Construct(canvas, messageBox, readOnly: true, new Color(0, 0, 0, 0.5f));
+
+            messageBox.Construct(text);
+            messageBox.onApplyAction.AddListener(onApplyAction);
         }
 
         public static void DestroyAllChildren(Transform transform)

@@ -41,6 +41,13 @@ namespace WordUp.Service.Word
             return true;
         }
 
+        public void DeleteAll()
+        {
+            this.Cache.Clear();
+            
+            Save();
+        }
+
         public void CreateOrUpdate(WordDto model)
         {
             WordDto savedModel = GetModel(model.Guid);

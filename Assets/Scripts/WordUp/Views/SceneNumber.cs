@@ -12,6 +12,7 @@
         LearnGroupView = 7,
         LearnTestMenu = 8,
         LearnGameView = 9,
-        LearnGameCompleteView = 10
+        LearnGameCompleteView = 10,
+        ExtensionSettingsView = 11
     }
 }

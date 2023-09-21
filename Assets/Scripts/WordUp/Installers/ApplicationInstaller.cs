@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Unity.Services.Core;
 using Unity.Services.RemoteConfig;
 using WordUp.Api;
@@ -30,16 +31,25 @@ namespace WordUp.Installers
             }
             
             RemoteConfigService.Instance.FetchConfigs(new userAttributes(), new appAttributes());
+
+            LoadWordsIfNeed();
         }
 
         private async Task InitializeRemoteConfigAsync()
         {
             await UnityServices.InitializeAsync();
+        }
 
-           // if (!AuthenticationService.Instance.IsSignedIn)
-            //{
-                //await AuthenticationService.Instance.SignInAnonymouslyAsync();
-           // }
+        private void LoadWordsIfNeed()
+        {
+            IWordService wordService = new WordService();
+
+            if (!wordService.GetModels().Any())
+            {
+                WordsLoader loader = new WordsLoader(wordService);
+
+                loader.LoadWords();   
+            }
         }
     }
 

@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c691e39-4158-4b3c-875a-5859f335dc3b" name="Changes" comment="add deep clone">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ExtensionSettingsInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ExtensionSettingsInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ConfirmedMessageBox.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ConfirmedMessageBox/ConfirmedMessageBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/UI/ConfirmedMessageBox/ConfirmedMessageBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ExtensionSettingsView.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ExtensionSettingsView/ExtensionSettingsViewController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/ExtensionSettingsView/ExtensionSettingsViewController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/WordsLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/WordsLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Objects/LernMenu/ViewContentRow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objects/LernMenu/ViewContentRow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Objects/LernMenu/ViewContentRowItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objects/LernMenu/ViewContentRowItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Objects/WordList/WordList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objects/WordList/WordList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DictionaryList_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DictionaryList_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LearnGroup_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LearnGroup_Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LearnMenu_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LearnMenu_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemVisualization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/LearnMenuView/LearnMenuGroupItemVisualization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LearnTestMenu_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LearnTestMenu_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Profile_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Profile_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/ApplicationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/MainMenuInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Installers/MainMenuInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/IWordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/IWordService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/WordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Service/Word/WordService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/UIHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Shared/StaticShared/UIHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneNumber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WordUp/Views/SceneNumber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +211,7 @@
       <workItem from="1695059723744" duration="6131000" />
       <workItem from="1695111113609" duration="7422000" />
       <workItem from="1695202876154" duration="384000" />
-      <workItem from="1695279962587" duration="2050000" />
+      <workItem from="1695279962587" duration="7566000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -266,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695284106481</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add deep clone">
+      <option name="closed" value="true" />
+      <created>1695284997022</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695284997022</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

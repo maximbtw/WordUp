@@ -1881,12 +1881,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1543528749013646170, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_DecelerationRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543528749013646170, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
       propertyPath: m_ScrollSensitivity
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2280987131023246858, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
       propertyPath: m_Name
       value: WordList
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020107379221290397, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020107379221290397, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020107379221290397, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020107379221290397, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020107379221290397, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4375954982905578774, guid: d28f283713c8c4c4c89c18e651a5bf4a, type: 3}
       propertyPath: m_AnchorMax.x
