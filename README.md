@@ -7,12 +7,12 @@ A simple mobile app built with **Unity** to help users learn and memorize Englis
 Here are a few screenshots from the app:
 
 <p align="center">
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/main.jpg" width="280" />
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/dictionary-menu.jpg" width="280" />
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/edit-menu.jpg" width="280" />
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/test-select-menu.jpg" width="280" />
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/play-menu.jpg" width="280" />
-  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/play-select-menu.jpg" width="280" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/main.jpg" width="200" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/dictionary-menu.jpg" width="200" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/edit-menu.jpg" width="200" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/test-select-menu.jpg" width="200" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/play-menu.jpg" width="200" />
+  <img src="https://github.com/maximbtw/WordUp/blob/master/docs/play-select-menu.jpg" width="200" />
 </p>
 
 ## 📱 Platform
